@@ -1,0 +1,394 @@
+>>> 1 + 2 
+3
+>>> 'hej ' + " med dig" 
+'hej  med dig'
+>>> 1 + "hello"
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> "hello" + 1
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> "Hello " + str(1)
+'Hello 1'
+>>> f"{1 + 2} World!"
+'3 World!'
+>>> f"{1 + 2:^60} World!"
+'                             3                               World!'
+>>> f"{1 + 2:^=20} World!"
+'^^^^^^^^^^^^^^^^^^^3 World!'
+>>> f"{1 + 2:=^20} World!"
+'=========3========== World!'
+>>> x = 1
+>>> x
+1
+>>> print("hello")
+hello
+>>> print("hello", 1, 2)
+hello 1 2
+>>> input("Who are you? ")
+Who are you? It's me
+"It's me"
+>>> %Run scratch.py
+hello
+hello 1 2
+>>> %Run scratch.py
+hello
+hello 1 2
+>>> %Run scratch.py
+hello
+hello 1 2
+hej s
+>>> %Run scratch.py
+hello
+hello 1 2
+2010 s
+>>> %Run scratch.py
+hello
+hello 1 2
+Traceback (most recent call last):
+  File "/Users/ckl/Desktop/Courses/Avanceret Programmering/flows/F1/scratch.py", line 5, in <module>
+    print(2020 - name, s)
+NameError: name 's' is not defined
+>>> %Run scratch.py
+hello
+hello 1 2
+2010  s
+>>> %Run scratch.py
+hello
+hello 1 2
+2010 s
+>>> %Run scratch.py
+hello
+hello 1 2
+2010 s 1
+>>> %Run scratch.py
+hello
+hello 1 2
+2010 s {1}
+>>> %Run scratch.py
+hello
+hello 1 2
+2010 s {1 + 2}
+>>> %Run scratch.py
+Write your name? Christian
+>>> %Run scratch.py
+2020
+>>> %Run scratch.py
+2020
+>>> %Run scratch.py
+What is your age?
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> %Debug scratch.py
+What is your age?
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> %Run scratch.py
+What is your age?
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> %Debug scratch.py
+What is your age?10
+>>> %Run scratch.py
+What is your age?10
+2010
+>>> [1, "hej", True]
+[1, 'hej', True]
+>>> 
+>>> [1, "hej", True][2]
+True
+>>> [1, "hej", True][-1]
+True
+>>> [1, "hej", True][-2]
+'hej'
+>>> y = [1, 2, 3]
+>>> y.pop()
+3
+>>> y
+[1, 2]
+>>> y.append(3)
+>>> y
+[1, 2, 3]
+>>> y.pop(0)
+1
+>>> y
+[2, 3]
+>>> y.append(1, 3)
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+TypeError: append() takes exactly one argument (2 given)
+>>> y[0] = 2
+>>> y
+[2, 3]
+>>> y[0] = 10
+>>> y
+[10, 3]
+>>> y = [1, 2, 3, 4, 5]
+>>> y[1:]
+[2, 3, 4, 5]
+>>> y[1:3]
+[2, 3]
+>>> y[1:-1]
+[2, 3, 4]
+>>> len([1,2, 3])
+3
+>>> y = (1, 2, 3)
+>>> y[0] = 2
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> y[0:2]
+(1, 2)
+>>> y
+(1, 2, 3)
+>>> y = [1, 2, 3]
+>>> x = y
+>>> x[0] = "øv"
+>>> x
+['øv', 2, 3]
+>>> y
+['øv', 2, 3]
+>>> x = list(y)
+>>> x
+['øv', 2, 3]
+>>> x[0] = "ok"
+>>> x
+['ok', 2, 3]
+>>> y
+['øv', 2, 3]
+>>> x = y 
+>>> x
+['øv', 2, 3]
+>>> x = [1, 2, 3]
+>>> y
+['øv', 2, 3]
+>>> y[0]
+'øv'
+>>> z = tuple([1,2,3])
+>>> z
+(1, 2, 3)
+>>> z = tuple([1,[1],3])
+>>> z
+(1, [1], 3)
+>>> 
+>>> z[1][0] = 3
+>>> z
+(1, [3], 3)
+>>> %Run scratch.py
+>>> %Debug scratch.py
+>>> %Run scratch.py
+I thought so!
+>>> %Run scratch.py
+What?
+>>> "red" == "red"
+True
+>>> "blue" == "red"
+False
+>>> color = "blue" == "red
+  File "<pyshell>", line 1
+    color = "blue" == "red
+                         ^
+SyntaxError: EOL while scanning string literal
+>>> color = "blue" == "red"
+>>> (color = "blue") == "red"
+  File "<pyshell>", line 1
+    (color = "blue") == "red"
+           ^
+SyntaxError: invalid syntax
+>>> color 
+False
+>>> %Run scratch.py
+What is your favorite color?RED
+cooL
+>>> %Run scratch.py
+What is your favorite color?sdasdas
+I dont know of that color
+>>> %Run scratch.py
+What is your favorite color? red
+I dont know of that color
+>>> %Debug scratch.py
+What is your favorite color?red
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> False or True
+True
+>>> False or "Ting"
+'Ting'
+>>> False or None or "Ting"
+'Ting'
+>>> [] or [1]
+[1]
+>>> [] or [1] or [2]
+[1]
+>>> 
+>>> color == "hello" or color == "hello"
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+NameError: name 'color' is not defined
+>>> color in {"Yellow", "blue"}
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+NameError: name 'color' is not defined
+>>> color in ["Yellow", "blue"]
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+NameError: name 'color' is not defined
+>>> 1 in ["Yellow", "blue"]
+False
+>>> "Yellow" in ["Yellow", "blue"]
+True
+>>> {1}
+{1}
+>>> {1,2,3}
+{1, 2, 3}
+>>> {1,3,2}
+{1, 2, 3}
+>>> {1,3,2}.add(2)
+>>> x = {1,3,2}
+>>> x
+{1, 2, 3}
+>>> x.add(2)
+>>> x
+{1, 2, 3}
+>>> x.add([1])
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>> x.add((1,2,3))
+>>> x
+{1, 2, 3, (1, 2, 3)}
+>>> %Run scratch.py
+What is your favorite color?RED
+cooL
+>>> "sads".upper()
+'SADS'
+>>> x.add("x")
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+NameError: name 'x' is not defined
+>>> x = {1, 2, 3}
+>>> x.add("x")
+>>> x
+{1, 2, 3, 'x'}
+>>> "x"[0] = 1
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> i = 5
+>>> while i > 0:
+    print(i)
+    i -= 1
+
+5
+4
+3
+2
+1
+>>> lst = [ "a", "b", "c" ]
+>>> for l in lst:
+    print(l)
+
+a
+b
+c
+>>> for i,l in enumerate(lst):
+    print(i, l)
+    
+0 a
+1 b
+2 c
+>>> for l in reversed(range(0, 5, 2)):
+    print(l)
+    
+4
+2
+0
+>>> %Run scratch.py
+[]a
+>>> %Run scratch.py
+[]: a
+>>> %Run scratch.py
+[]: a
+['a']: s
+['a', 's']: d
+['a', 's', 'd']: fa
+['a', 's', 'd', 'fa']: s
+['a', 's', 'd', 'fa', 's']: dx
+['a', 's', 'd', 'fa', 's', 'dx']: Traceback (most recent call last):
+  File "/Users/ckl/Desktop/Courses/Avanceret Programmering/flows/F1/scratch.py", line 5, in <module>
+    x = input(f"{stack}: ")
+KeyboardInterrupt: Execution interrupted
+>>> %Run scratch.py
+[]: s
+[]: s
+[]: d
+[]: d
+[]: 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> %Debug scratch.py
+[]: 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> %Debug scratch.py
+[]: 10
+['10']: 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> %Run scratch.py
+[]: 12
+[12]: 123
+[12, 123]: +
+[12, 123]: 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> %Run scratch.py
+[]: 3
+[3]: !
+[6]: !
+[720]: 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> %Run scratch.py
+[]: 1
+[1]: !
+Traceback (most recent call last):
+  File "/Users/ckl/Desktop/Courses/Avanceret Programmering/flows/F1/scratch.py", line 8, in <module>
+    res = product(range(1, y + 1))
+NameError: name 'product' is not defined
+>>> %Run scratch.py
+Traceback (most recent call last):
+  File "/Users/ckl/Desktop/Courses/Avanceret Programmering/flows/F1/scratch.py", line 4
+    opr = { "+" : lambda a b: a + b
+                           ^
+SyntaxError: invalid syntax
+>>> %Run scratch.py
+[]: Traceback (most recent call last):
+  File "/Users/ckl/Desktop/Courses/Avanceret Programmering/flows/F1/scratch.py", line 9, in <module>
+    x = input(f"{stack}: ")
+KeyboardInterrupt: Execution interrupted
+>>> stack = [1]
+>>> stack and stack.pop()
+1
+>>> stack and stack.pop()
+[]
+>>> *stack and stack.pop()) or 0
+  File "<pyshell>", line 1
+    *stack and stack.pop()) or 0
+           ^
+SyntaxError: invalid syntax
+>>> (stack and stack.pop()) or 0
+0
+>>> %Debug scratch.py
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Python 3.8.5 (/usr/local/bin/python3.8)
+>>> %Run scratch.py
+[]: +
+[]: 10
+[10]: -
+[-10]: 
+
