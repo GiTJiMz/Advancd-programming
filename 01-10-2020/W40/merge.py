@@ -11,9 +11,24 @@ def merge(xs, ys):
     [1, 2, 3, 4]
     """
 
+    # Recursive
 
+    if not xs:
+        return ys
+    if not ys:
+        return xs
+    
+    x, *xs_rest = xs
+    y, *ys_rest = ys
+    if x < y:
+        return [x] + merge(xs_rest, ys)
+    else:
+        return [y] + merge(xs, ys_rest)
+    
+    # Iterative
 
 
 if __name__ == "__main__":
     import doctest
-    doctest.testmod()
+    if doctest.testmod().failed == 0:
+        print("Damn I'm good")
